@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>Demo ankit</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+
+  
+ </head>
+ <body>
+  <br /><br />
+  
+   
+   <h3 align="center">Issue Data demo</h3>   
+   <br /><br />
+    <label for="Issue Title">Issue Title</label>
+    <input type="text" name="Issue Title" id="search" placeholder="Search Employee Details" class="form-control" />
+  <br>
+   <ul class="list-group" id="result"></ul>
+   
+
+   <br />
+  <br>
+  <br>
+  <label for="Issue Description">Issue Description</label><br>
+  <input type="text"  id="IssueDescription" name="Issue Description" placeholder="Ex: simple description" required="" class="form-control" value="">
+  <!-- <ul class="list-group" id="resultForID"></ul>  -->
+  <br>
+  <label for="RECOMMENDATION">Recommended Action</label><br>
+  <input type="text"  id="RECOMMENDATION" name="RECOMMENDATION" placeholder="Ex: anything" required="" class="form-control" value="">
+  <ul class="list-group" id="resultForRecommandation"></ul> 
+  <br>
+  <label for="TECHNICAL_RECCOMENDATION">Suggested Code</label><br>
+  <input type="text"  id="TechnicalReccomendation" name="Technical Reccomendation" placeholder="Ex: Any suggestions" required="" class="form-control">
+  <ul class="list-group" id="resultForTR"></ul> 
+  <br>
+  <label for="SUCCESS_CRITERIA">WCAG S.C.</label><br>
+  <input type="text"  id="SuccessCriteria" name="Success Criteria" placeholder="Ex: 1.2.1" required="" class="form-control">
+  <ul class="list-group" id="resultForSC"></ul> 
+  <br>
+  <label for="CONFORMANCE_LEVEL">Level A, AA</label><br>
+  <input type="text"  id="ConformanceLevel" name="Conformance Level" placeholder="Ex: A" required="" class="form-control">
+  <!-- <ul class="list-group" id="resultForCL"></ul>  -->
+  <br>
+
+  <br><br>
+  
+  <input type="submit" value="Submit">
+</body>
+</html>
+
+<script>
+$(document).ready(function(){
+ $.ajaxSetup({ cache: false });
+ $('#search').keyup(function(){
+  $('#result').html('');
+  $('#resultForID').html('');
+  $('#resultForRecommandation').html('');
+  $('#resultForTR').html('');
+  $('#resultForSC').html('');
+//   $('#resultForCL').html('');
+  $('#state').val('');
+  var searchField = $('#search').val();
+  var expression = new RegExp(searchField, "i");
+  $.getJSON('/WCAG-issue-Library.json', function(data) {
+   $.each(data, function(key, value){
+    if (value.ISSUE_TITLE.search(expression) != -1 || value.ISSUE_DESCRIPTION.search(expression) != -1 || value.RECOMMENDATION.search(expression) != -1 || value.TECHNICAL_RECCOMENDATION.search(expression) != -1 || value.SUCCESS_CRITERIA.search(expression) != -1 || value.CONFORMANCE_LEVEL.search(expression) != -1)
+    {
+     $('#result').append('<li class="list-group-item link-class"> '+value.ISSUE_TITLE+' </li>' );
+     $('#IssueDescription').val(value.ISSUE_DESCRIPTION);
+     $('#RECOMMENDATION').val(value.RECOMMENDATION);
+     $('#TechnicalReccomendation').val(value.TECHNICAL_RECCOMENDATION);
+     $('#SuccessCriteria').val(value.SUCCESS_CRITERIA);
+     $('#ConformanceLevel').val(value.CONFORMANCE_LEVEL);
+    }
+   });   
+  });
+ });
+ 
+ $('#result').on('click', 'li', function() {
+  var click_text = $(this).text().split('|');
+  $('#search').val($.trim(click_text[0]));
+  $("#result").html('');
+ });
+});
+</script>

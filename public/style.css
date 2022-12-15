@@ -95,3 +95,29 @@ input[type=button]:hover {
   background-color: #19711d;
 
 }
+.list-group{
+  margin-left: 30%;
+}
+#result {
+  position: absolute;
+  width: 100%;
+  max-width:870px;
+  cursor: pointer;
+  overflow-y: auto;
+  max-height: 400px;
+  box-sizing: border-box;
+  z-index: 1001;
+ }
+ .link-class:hover{
+  background-color:#f1f1f1;
+ }
+ #result2 {
+  position: absolute;
+  width: 100%;
+  max-width:870px;
+  cursor: pointer;
+  overflow-y: auto;
+  max-height: 400px;
+  box-sizing: border-box;
+  z-index: 1001;
+ }

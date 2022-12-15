@@ -1,0 +1,682 @@
+[
+    {
+      "ISSUE_TITLE": "Missing page title",
+      "ISSUE_DESCRIPTION": "The page does not present a title. In fact, the source code of the page includes an empty <title> element.\nThis makes it difficult for screen reader users to identify the type of information made available on the page.",
+      "RECOMMENDATION": "When a title is not provided for a page, its URL is displayed instead. This may make it difficult for many users mainly screen reader users find it difficult to identify the content of the page.\nProvide meaningful and unique title for each web page to enable users to identify the web page content.",
+      "TECHNICAL_RECCOMENDATION": "<title>Homepage - XXXXX</title>",
+      "SUCCESS_CRITERIA": "2.4.2",
+      "CONFORMANCE_LEVEL": "A"
+    },
+    {
+      "ISSUE_TITLE": "Identical page title",
+      "ISSUE_DESCRIPTION": "Identical page title \"XXXXX\" is used for different pages of XXXXX website. This makes it difficult for screen reader users to identify the type of information made available on each page.",
+      "RECOMMENDATION": "Descriptive and meaningful page title gives users a brief idea about the information presented on a web page. Page title is also essential for users with learning disabilities, as it helps them to differentiate one web page from another.\nProvide meaningful and unique title for each web page to enable users to identify the web page content.",
+      "TECHNICAL_RECCOMENDATION": "<title>home page-XXXXX</title>\n<title>Contact us-XXXX</title>",
+      "SUCCESS_CRITERIA": "2.4.2",
+      "CONFORMANCE_LEVEL": "A"
+    },
+    {
+      "ISSUE_TITLE": "Inappropriate heading structure",
+      "ISSUE_DESCRIPTION": "Heading structure is found to be inappropriate on the page. Text such as \"XXXX\" is coded as <h3> and text such as \"XXXX\" is coded as <h4> which does not matches the visual hierarchy on the page. As a result, screen reader users found it difficult to understand the page's content structure.",
+      "RECOMMENDATION": "Headings are used to add structure to the web page. Appropriate heading structure enables screen reader users to understand the page structure. Skipping heading levels will confuse screen reader users as to some information is not being read out to them. \nIn addition, screen reader users have a tendency to skim through the document using heading level navigation. Appropriate heading structure enables screen reader users to  navigate through the document easily.\nUse heading levels as per specification such as <h1> should be followed by <h2>, <h3> and so on.\nEven though this is required at WCAG 2.1 at Level AAA, it is recommended that the discussed issue be addressed as screen reader users rely on headings heavily to understand the page structure.",
+      "TECHNICAL_RECCOMENDATION": "<h1>Contact us</h1>\n<h2>Address</h2>",
+      "SUCCESS_CRITERIA": "1.3.1",
+      "CONFORMANCE_LEVEL": "Best Practice"
+    },
+    {
+      "ISSUE_TITLE": "Missing list mark-up",
+      "ISSUE_DESCRIPTION": "List mark-up is not used to present related information. For example, content such as \"XXXX\", \"XXXX\", etc. in the main content area is not marked as list items which visually looks like a list. As a result, screen reader users will find it difficult to navigate to the lists and different list items quickly.",
+      "RECOMMENDATION": "List mark-up enables screen reader users to identify number of list items. On the basis of appropriate list mark-up, screen reader announces beginning and end of a list. This helps users to navigate and interpret the information effectively.\n\nUse appropriate list mark-up, such as <li>, <ul> and <ol> to identify related information. In addition, consider applying styles to maintain the visual presentation of a web page.",
+      "TECHNICAL_RECCOMENDATION": "<ul>\n<li>Apple</li>\n<li>Mango</li>\n<ul>",
+      "SUCCESS_CRITERIA": "1.3.1",
+      "CONFORMANCE_LEVEL": "A"
+    },
+    {
+      "ISSUE_TITLE": "Missing role for link",
+      "ISSUE_DESCRIPTION": "The role \"Link\" is not provided for \"XXXX\", \"XXXX\", etc. interactive elements present in the footer section. As a result, screen reader users cannot interact with the interactive elements effectively.",
+      "RECOMMENDATION": "All the interactive elements must be accessible for assistive technology users such as screen reader users. When native HTML elements are used basic information about an element, such as name, role, state and value is exposed to assistive technologies by default. However, for custom components this information needs to be made available for assistive technologies so users can interact with the custom components effectively.\n\nInclude the “href” attribute in the source code of <a> element.",
+      "TECHNICAL_RECCOMENDATION": "<a href=\"…\"> Home</a>",
+      "SUCCESS_CRITERIA": "4.1.2",
+      "CONFORMANCE_LEVEL": "A"
+    },
+    {
+      "ISSUE_TITLE": "Missing role for button",
+      "ISSUE_DESCRIPTION": "The role \"button\" is not provided for \"XXXX\", \"XXXX\", etc. interactive elements present in the footer section. As a result, screen reader users cannot interact with the interactive elements effectively.",
+      "RECOMMENDATION": "All the interactive elements must be accessible for assistive technology users such as screen reader users. When native HTML elements are used basic information about an element, such as name, role, state and value is exposed to assistive technologies by default. However, for custom components this information needs to be made available for assistive technologies so users can interact with the custom components effectively.\n\nApply the following changes:\n• Mark-up the interactive elements using <button> element.\n• Modify scripts to ensure that the buttons are accessible with a keyboard as well as a mouse.",
+      "TECHNICAL_RECCOMENDATION": "<button>Submit</button>",
+      "SUCCESS_CRITERIA": "4.1.2",
+      "CONFORMANCE_LEVEL": "A"
+    },
+    {
+      "ISSUE_TITLE": "Elements have missing start or end tags",
+      "ISSUE_DESCRIPTION": "The HTML code of the website does not validate against the HTML 5 specification. For instance, the source code of the page presents 107 errors and 46 warnings when checked with the W3C validator. In particular, few instances are found where elements are missing start or end tags. As a result, the HTML validator generated errors.",
+      "RECOMMENDATION": "Browsers may struggle to compile the accessibility tree and assistive technologies may be unable to parse elements. Users may experience strange behaviour or diminished accessibility.\n\nMake sure that elements have complete start and end tags. ",
+      "TECHNICAL_RECCOMENDATION": "<h2>About Us</h2>\n<p>We were founded in 1820</p>",
+      "SUCCESS_CRITERIA": "4.1.1",
+      "CONFORMANCE_LEVEL": "A"
+    },
+    {
+      "ISSUE_TITLE": "Elements have invalid nesting",
+      "ISSUE_DESCRIPTION": "The HTML code of the website does not validate against the HTML 5 specification. For instance, the source code of the page presents 107 errors and 46 warnings when checked with the W3C validator. In particular, few instances are found where elements are not nested properly. As a result, the HTML validator generated errors.",
+      "RECOMMENDATION": "Browsers may struggle to compile the accessibility tree and assistive technologies may be unable to parse elements. Users may experience strange behaviour or diminished accessibility.\n\nMake sure that the nesting of elements is allowed by the HTML specification. For example:\n\n<!-- you cannot nest interactive items within each other -->\n<!-- in this example, the issue is created by the link within the button -->",
+      "TECHNICAL_RECCOMENDATION": "<button><a href=\"...\">Submit</a></button>",
+      "SUCCESS_CRITERIA": "4.1.1",
+      "CONFORMANCE_LEVEL": "A"
+    },
+    {
+      "ISSUE_TITLE": "Elements have duplicate attributes",
+      "ISSUE_DESCRIPTION": "The HTML code of the website does not validate against the HTML 5 specification. For instance, the source code of the page presents 107 errors and 46 warnings when checked with the W3C validator. In particular, few instances are found where duplicate attributes are specified for elements. As a result, the HTML validator generated errors.",
+      "RECOMMENDATION": "Browsers may struggle to compile the accessibility tree and assistive technologies may be unable to parse elements. Users may experience strange behaviour or diminished accessibility.\n\nMake sure that elements do not have duplicate attributes. ",
+      "TECHNICAL_RECCOMENDATION": "<button aria-expanded=\"true\" aria-expanded=\"false\">incorrectly has two aria-expanded attributes</button>\n<button aria-expanded=\"true\">correctly has one aria-expanded attribute</button>",
+      "SUCCESS_CRITERIA": "4.1.1",
+      "CONFORMANCE_LEVEL": "A"
+    },
+    {
+      "ISSUE_TITLE": "Elements have duplicate ids",
+      "ISSUE_DESCRIPTION": "The HTML code of the website does not validate against the HTML 5 specification. For instance, the source code of the page presents 107 errors and 46 warnings when checked with the W3C validator. In particular, few instances are found where duplicate ID attribute values are specified for two different elements. As a result, the HTML validator generated errors.",
+      "RECOMMENDATION": "Browsers may struggle to compile the accessibility tree and assistive technologies may be unable to parse elements. Users may experience strange behaviour or diminished accessibility.\n\nMake sure that elements have a unique id. ",
+      "TECHNICAL_RECCOMENDATION": "These elements have unique id values\n\n<button id=\"accountAddCurrent\">Add New Current Account</button>\n<button id=\"accountAddSavings\">Add New Savings Account</button>\n\nThese elements have duplicate id values\n\n<button id=\"accountAdd\">Add New Current Account</button>\n<button id=\"accountAdd\">Add New Savings Account</button>",
+      "SUCCESS_CRITERIA": "4.1.1",
+      "CONFORMANCE_LEVEL": "A"
+    },
+    {
+      "ISSUE_TITLE": "Page has no lang attribute",
+      "ISSUE_DESCRIPTION": "The default language used for the page is not specified in the HTML code.",
+      "RECOMMENDATION": "Knowing the language of a page enables assistive technology to communicate content accurately. It is used by screen readers, Braille displays, and other text-to-speech programs. There is a page without a \"lang\" attribute. Assistive technology may miscommunicate content.\n\nSpecify a \"lang\" attribute for all pages. This is included in the opening <html> tag. ",
+      "TECHNICAL_RECCOMENDATION": "<!-- English -->\n<html lang=\"en\">",
+      "SUCCESS_CRITERIA": "3.1.1",
+      "CONFORMANCE_LEVEL": "A"
+    },
+    {
+      "ISSUE_TITLE": "Page lang attribute is incorrect",
+      "ISSUE_DESCRIPTION": "On the page, the “fr” lang attribute does not match with the default language of “English” page. As a result screen reader users might not get the page content effectively.",
+      "RECOMMENDATION": "Knowing the language of a page enables assistive technology to communicate content accurately. It is used by screen readers, Braille displays, and other text-to-speech programs. There are pages that have a lang attribute that specifies the wrong language. Assistive technology may miscommunicate content.\nMake sure that the lang attribute in the opening <html> tag uses the appropriate value. ",
+      "TECHNICAL_RECCOMENDATION": "<!-- English -->\n<html lang=\"en\">\n<!-- Arabic-->\n<html lang=\"ar\">",
+      "SUCCESS_CRITERIA": "3.1.1",
+      "CONFORMANCE_LEVEL": "A"
+    },
+    {
+      "ISSUE_TITLE": "Change of language not identified",
+      "ISSUE_DESCRIPTION": "The \"España\" and \"Deutschland\" options of the language switcher drop-down list in the header section are in Spanish and German language respectively.\nThe non-English content has not been identified through the HTML code.",
+      "RECOMMENDATION": "When the primary language and secondary language is not defined through the HTML mark-up, user agents, such as screen readers and Braille displays, might convey the information in other languages incorrectly.\nAdd \"hreflang\" attribute to <a> element of \"España\" and \"Deutschland\" links.",
+      "TECHNICAL_RECCOMENDATION": "<q lang=\\fr\\>[…]</q>",
+      "SUCCESS_CRITERIA": "3.1.2",
+      "CONFORMANCE_LEVEL": "AA"
+    },
+    {
+      "ISSUE_TITLE": "Missing table mark up for data table",
+      "ISSUE_DESCRIPTION": "The content such as \"Status\", \"Medium\", etc. is presented using <div> element in the main content area. As a result, screen reader cannot access the data effectively.\n",
+      "RECOMMENDATION": "Tables should be marked accurately. Data tables provide content in certain context. When the screen readers are informed about a table, they expect for table headers and data cells. Navigating through each cell enables them to identify and interpret tabular content. Table headers enable users to identify the context of table data. Table headers are provided with <th> tags.\nA screen reader reads the table information in a linear order reading one cell at a time. Thus it is essential to mark-up the table headers to help users interpret the table data correctly.\n\n\n Utilized table mark-up, such as <table>, <tr>, <th>, <td>, etc. to present the content as a data table.",
+      "TECHNICAL_RECCOMENDATION": "\n<table>\n<tr >\n<th>Status</th>\n<th>Median</th>\n<th>Average</th>\n</tr>\n<tr >\n<th>Pending</th>\n<td>65</td>\n<td>52</td>\n</tr>\n<tr>\n<th>Active</th>\n<td>83</td>\n<td>121</td>\n</tr>\n</table>",
+      "SUCCESS_CRITERIA": "1.3.1",
+      "CONFORMANCE_LEVEL": "A"
+    },
+    {
+      "ISSUE_TITLE": "Layout table announced for screen reader users",
+      "ISSUE_DESCRIPTION": "The table mark-up is used to present the information about \"Sub total\", \"Shipping\" and \"Order total\" in the main content area for layout purpose.\nAs a result, screen reader users will have to listen to additional table information unnecessarily.",
+      "RECOMMENDATION": "\tAdd role=\"presentation\" to <table> elements of the layout tables.",
+      "TECHNICAL_RECCOMENDATION": "<table role=presentation>….</table>",
+      "SUCCESS_CRITERIA": "Best Practice",
+      "CONFORMANCE_LEVEL": "Best Practice"
+    },
+    {
+      "ISSUE_TITLE": "Missing 'alt' attribute for image",
+      "ISSUE_DESCRIPTION": "On the page, \"alt\" attribute is missing in the source code for the captcha image buttons that becomes available when users check the \"I'm not a robot\" checkbox. \nAs a result, the HTML validator generated the following error:\n• Error: required attribute \"ALT\" not specified. ",
+      "RECOMMENDATION": "Alternate text provides the information conveyed through images to the users in the form of text. Alternate text is helpful for users with visual disabilities, learning disabilities, users browsing with text browsers etc. to understand the information conveyed using images. Provide meaningful and descriptive alternate text for images that describes the purpose of the image. \nImage links are elements which are a part of page navigation. As a result, alternate text must be provided for screen reader users to be able to access image links. \nIn addition, ’alt’ is a mandatory attribute for the image element (tag) as per W3C specifications. In the absence of the “alt” attribute HTML validator will generate an error.\n\nProvide alternate text for all the informative images using \"alt\" attribute. Ensure that the alternate text is descriptive of the image purpose.\n",
+      "TECHNICAL_RECCOMENDATION": "<img src=”…”alt=””>",
+      "SUCCESS_CRITERIA": "1.1.1",
+      "CONFORMANCE_LEVEL": "A"
+    },
+    {
+      "ISSUE_TITLE": "Missing iframe title",
+      "ISSUE_DESCRIPTION": "Title is missing for an iframe used to display the “XXXX” section. As a result, screen reader users found it difficult to understand the purpose of the iframe.  ",
+      "RECOMMENDATION": "Assistive technologies, such as screen readers identify the iframe using the name and title attribute values. Screen reader users should be able to distinguish one iframe from other especially if more than one iframe exists on the page. Screen readers allow the users to jump from one iframe to another. Appropriate iframe name and title helps screen reader users to understand the iframe content and navigate between iframes easily. \nAdd appropriate title for all the frames and iframes used on the page.",
+      "TECHNICAL_RECCOMENDATION": "<iframe title=\"XXXX\" src=\"…..\" >\n(...)\n</iframe>",
+      "SUCCESS_CRITERIA": "4.1.2",
+      "CONFORMANCE_LEVEL": "A"
+    },
+    {
+      "ISSUE_TITLE": "Informative image defined through CSS",
+      "ISSUE_DESCRIPTION": "The social media image links such as \"Facebook\", \"Twitter\", \"Youtube\" and \"Instagram\" in the footer section are defined through CSS.",
+      "RECOMMENDATION": "Images are defined through CSS to reduce the page load time. However, only decorative images that do not convey information must be defined through CSS. Alternate text needs to be specified for informative images and the alternate text cannot be specified through CSS.\nThis will result in users of screen readers going unaware about the presence of these images and will not have access to their content. \n\nProvide appropriate textual descriptions  for the social media image links using \"aria-label\" attribute.  ",
+      "TECHNICAL_RECCOMENDATION": "<a aria-label=\"Facebook\" href=\"…\"></a>",
+      "SUCCESS_CRITERIA": "1.1.1",
+      "CONFORMANCE_LEVEL": "A"
+    },
+    {
+      "ISSUE_TITLE": "Inaccurate alternate text specified for image link",
+      "ISSUE_DESCRIPTION": "Across the tested pages, inaccurate alternate text \"XXXX\" is provided for the image link in the footer section of the tested pages of the website which does not provide the similar information that is visually conveyed by the image link.",
+      "RECOMMENDATION": "Alternate text provides the information conveyed through image links to the users in the form of text. Alternate text is helpful for users with visual disabilities, learning disabilities, users browsing with text browsers etc. to understand the information conveyed using image links. Provide meaningful and descriptive alternate text for image links that describes the purpose of the image link.\n\nEnsure that the alternate text for the image link is descriptive of the image's purpose.\nIn the mentioned example, specify accurate alternate text \"website logo\" for the image link.",
+      "TECHNICAL_RECCOMENDATION": "<a href=\"https://www.facebook.com\" <img src=\"…\" alt=\"Facebook-go to home page\">\n</a>",
+      "SUCCESS_CRITERIA": "1.1.1",
+      "CONFORMANCE_LEVEL": "A"
+    },
+    {
+      "ISSUE_TITLE": "Inaccurate alternate text is specified for image",
+      "ISSUE_DESCRIPTION": "Alternate text provided to an informative image was found to be inaccurate. \nFor instance, alternate text for an informative image was provided as \"www.facebook.com\" for logo image in the header section which does not provide the  information that is visually conveyed by the image.",
+      "RECOMMENDATION": "Alternate text provides the information conveyed through images to the users in the form of text. Alternate text is helpful for users with visual disabilities, learning disabilities, users browsing with text browsers etc. to understand the information conveyed using images. Provide meaningful and descriptive alternate text for images that describes the purpose of the image.\n\nEnsure that the alternate text for the images is descriptive of the image’s purpose. For instance, in the mentioned example it is advisable to change the \"Facebook Logo\" as the alt attribute value.",
+      "TECHNICAL_RECCOMENDATION": "<img src=\"…\" alt=\"Facebook logo\">",
+      "SUCCESS_CRITERIA": "1.1.1",
+      "CONFORMANCE_LEVEL": "A"
+    },
+    {
+      "ISSUE_TITLE": "Incomplete alternate text is specified for image",
+      "ISSUE_DESCRIPTION": "Alternate text provided to an informative image was found to be incomplete . \nFor instance, alternate text for an informative image was provided as \"Profile picture\" in the main content area which does not provide the  information that is visually conveyed by the image.",
+      "RECOMMENDATION": "Alternate text provides the information conveyed through images to the users in the form of text. Alternate text is helpful for users with visual disabilities, learning disabilities, users browsing with text browsers etc. to understand the information conveyed using images. Provide meaningful and descriptive alternate text for images that describes the purpose of the image.\n\nEnsure that the alternate text for the images is descriptive of the image’s purpose. For instance, in the mentioned example it is advisable to change the \"Profile picture of facebook founder\" as the alt attribute value.",
+      "TECHNICAL_RECCOMENDATION": "<img src=\"…\" alt=\"Profile picture of facebook founder\">",
+      "SUCCESS_CRITERIA": "1.1.1",
+      "CONFORMANCE_LEVEL": "A"
+    },
+    {
+      "ISSUE_TITLE": "Unnecessary alt text for decorative images",
+      "ISSUE_DESCRIPTION": "Decorative images have been given descriptive alternate text such as \"XXXX\" , \"XXXX\" , \"XXXX\", etc. present in the main content area which was found to be unnecessary by users with visual impairments.",
+      "RECOMMENDATION": "Provide meaningful and descriptive alternate text for images that describes the purpose of the image. However, if images are decorative then a descriptive alternate text is not required. Empty alternate text (alt=””) should be specified for decorative images to ensure that screen reader skips the decorative images.",
+      "TECHNICAL_RECCOMENDATION": "<img src=\"…\" alt=\"\">",
+      "SUCCESS_CRITERIA": "1.1.1",
+      "CONFORMANCE_LEVEL": "A"
+    },
+    {
+      "ISSUE_TITLE": "No text alternative for complex image",
+      "ISSUE_DESCRIPTION": "A graph is used to display important information in the main content area of the page.\nAs no text equivalent is provided for the complex image, the information conveyed using the image is not available for users with visual impairments.",
+      "RECOMMENDATION": "The textual description should convey the information that is available in the image. In the case of complex images, such as charts, diagrams etc. a detailed description about the image should be made available on the page to make the image is available for all users. This will ensure that all users including users with visual and learning impairments can understand the information conveyed by the image. \nIn the absence of accurate textual description for complex images, blind users have no access to the data shown in the graph. This becomes a serious issue when the information conveyed by the image is informative and not available anywhere else on the page. \n\nProvide short description for the image via “alt” attribute. Provide a full text equivalent for the mentioned graph. The text equivalent may be located on the page, or via a link directly following the complex image.\nIn this example, the text version should be a data table containing the information conveyed by the graph.",
+      "TECHNICAL_RECCOMENDATION": "Code not required",
+      "SUCCESS_CRITERIA": "1.1.1",
+      "CONFORMANCE_LEVEL": "A"
+    },
+    {
+      "ISSUE_TITLE": "iFrame has an inappropriate title",
+      "ISSUE_DESCRIPTION": "Title defined for an iframe used to display the “YouTube” content is inappropriate. As a result, screen reader users found it difficult to understand the purpose of the iframe.",
+      "RECOMMENDATION": "Interactive elements need a programmatically determined name, role, and value. These properties must also be accurate and appropriate. \n\nThere are iFrame elements that have an inappropriate accessible name. This may particularly disadvantage users that interface with the accessibility properties of elements, such as screen reader and voice recognition users. That the accessible name is inappropriate may confuse or mislead users.",
+      "TECHNICAL_RECCOMENDATION": "<iframe src=\"...\" title=\"Informative and Accurate iFrame Name\">\n...\n</iframe>",
+      "SUCCESS_CRITERIA": "4.1.2",
+      "CONFORMANCE_LEVEL": "A"
+    },
+    {
+      "ISSUE_TITLE": "Image of Text used",
+      "ISSUE_DESCRIPTION": "Images of text were used to display important information on the webpage. \nThe text such as \"XXXX\", \"XXXX\", \"XXXX\", etc. present in the slideshow was displayed using image of text.",
+      "RECOMMENDATION": "Images of text should be avoided as the images become pixilated and blur when zoomed in. Users with low vision, who use screen magnifiers, might find the text displayed using images difficult to read.\n\nUse of images of text should be avoided (except for logo types, maps, diagrams etc.) to ensure that the text does not become pixilated when zoomed in. Thus, it is recommended to specify the information as plain text and use styles for formatting effects.",
+      "TECHNICAL_RECCOMENDATION": "Texts must be included in HTML and formatted via CSS",
+      "SUCCESS_CRITERIA": "1.4.5",
+      "CONFORMANCE_LEVEL": "AA"
+    },
+    {
+      "ISSUE_TITLE": "Missing text transcript",
+      "ISSUE_DESCRIPTION": "Text transcript is missing for the video in main content area of the page. In the absence of text transcript, the audio/video content of the video will be inaccessible for users with visual and hearing impairments (deaf-blind users).",
+      "RECOMMENDATION": "Text transcript is full textual description of the video including audio and visual content. Text transcript must be accurate and displayed on user’s request. Users can click a button to access the transcript. Text transcripts are helpful for users with hearing impairments, deaf-blind users, and low bandwidth users and also preferred by visually impaired users.\n\nProvide text transcripts for the video and ensure that the description is accurate. The text transcript can be displayed on a separate page and a link/button can be provided besides the video to help users access the transcript.",
+      "TECHNICAL_RECCOMENDATION": "Code not required",
+      "SUCCESS_CRITERIA": "1.2.3",
+      "CONFORMANCE_LEVEL": "A"
+    },
+    {
+      "ISSUE_TITLE": "Missing captions for the video",
+      "ISSUE_DESCRIPTION": "Captions are missing for the video in the main content area. In the absence of captions, the audio content of the video will be inaccessible for users with hearing impairments.",
+      "RECOMMENDATION": "Captions are textual description of the audio content of a synchronized video. Captions are generally displayed at the bottom of the screen. Captions are different from sub-titles as sub-titles include textual description of the spoken word whereas captions include description for all the audio content including background sounds. \nCaptions are mainly of two types, Open captions and Close captions. It is a good practice to provide Close captions and provide users with an option to access if required. Captions must be synchronized with the video to help users access the content effectively and enjoy the experience.\nCaptions are provided to help users with hearing impairments access the audio information of a video. Since users with hearing impairments cannot listen to the audio, they rely on captions to understand the audio content. Captions when synchronized with the video helps users watch the video and read the caption text to understand the audio\n\nAdd synchronized captions for all videos whose audio content communicates information not included in the visual component.",
+      "TECHNICAL_RECCOMENDATION": "Code not required",
+      "SUCCESS_CRITERIA": "1.2.2",
+      "CONFORMANCE_LEVEL": "A"
+    },
+    {
+      "ISSUE_TITLE": "No audio description for video",
+      "ISSUE_DESCRIPTION": "Audio description has not been provided for the video in the main content area. Thus, users with visual impairments could not understand the important visual content conveyed in the video.",
+      "RECOMMENDATION": "Audio description is a narration of the information conveyed visually. It is a part of the soundtrack and describes any important visual content of the video. Audio description helps visually impaired users understand the video content when listening to the soundtrack.\n\nAdd narrations in the videos wherever the visual content is conveyed to ensure that users with visual impairments and learning impairments can listen to the narration and understand the content.",
+      "TECHNICAL_RECCOMENDATION": "Code not required",
+      "SUCCESS_CRITERIA": "1.2.5",
+      "CONFORMANCE_LEVEL": "AA"
+    },
+    {
+      "ISSUE_TITLE": "Video plays automatically",
+      "ISSUE_DESCRIPTION": "The “Instagram” video on the “Home” page plays automatically when the page is loaded. This made it difficult for screen reader users to access the page's content as the screen reader and the audio sound is playing simultaneously.",
+      "RECOMMENDATION": "When the page loads, screen readers start reading the page content for their users. Users find it difficult to listen to their screen reader if there is other audio playing at the same time on the web page. As a result, screen reader users will find it very difficult to access the page content.\n\nEnsure videos does not play automatically on page load.\n\nAlternatively, provide users with an option to pause the audio with the \"Esc\" key.",
+      "TECHNICAL_RECCOMENDATION": "Code not required",
+      "SUCCESS_CRITERIA": "1.4.2",
+      "CONFORMANCE_LEVEL": "A"
+    },
+    {
+      "ISSUE_TITLE": "Content flashes, flickers or blinks more than three time per second",
+      "ISSUE_DESCRIPTION": "Page contains content presenting rapid flashes (more than 3 flashes per second) or the flashes are not below the general threshold or red threshold",
+      "RECOMMENDATION": "Content must not flash more than three times in any one second period. \n\nThere is flashing content that exceeds that threshold. This may particularly disadvantage users with photosensitive epilepsy. The flashing content may trigger seizures that may seriously impact the users health — let alone their ability to navigate and operate the website.\n\nRemove or update the flashing content. The threshold for this success criterion has been tested with the [Photosensitive Epilepsy Analysis Tool](https://trace.umd.edu/peat). Be aware that this success criterion does not distinguish between different types of content and it does not have exceptions. \n\nAll content on the page must pass this success criterion. For example, if the flashing is caused by third-party advertisements, it is still in scope.",
+      "TECHNICAL_RECCOMENDATION": "Code not required",
+      "SUCCESS_CRITERIA": "2.3.1",
+      "CONFORMANCE_LEVEL": "A"
+    },
+    {
+      "ISSUE_TITLE": "CAPTCHAs that do not have multiple ways to complete them",
+      "ISSUE_DESCRIPTION": "Page contains captcha and alternative to captcha is missing",
+      "RECOMMENDATION": "Non-text content must have appropriate alternatives. This is required for the content to be understood by all users. Images, icons and so on may otherwise be miscommunicated by assistive technology. There are non-text CAPTCHAs that do not have multiple ways to complete them.\n\nMake sure that the implementation has multiple ways to complete them. For example, in addition to image recognition, transcribing characters from an audio message, solving a maths equitation, or answering a general knowledge question. The WCAG requirement is at least two methods. ",
+      "TECHNICAL_RECCOMENDATION": "Code not required",
+      "SUCCESS_CRITERIA": "1.1.1",
+      "CONFORMANCE_LEVEL": "A"
+    },
+    {
+      "ISSUE_TITLE": "Insufficient color contrast ",
+      "ISSUE_DESCRIPTION": "Some background/foreground color combinations with an insufficient contrast ratio are found on the page.\n\nThe #FFFFFF text \"Actions\" has an insufficient color contrast ratio of 2.9:1 with #27AE60 background.",
+      "RECOMMENDATION": "Two colors are considered to have good visibility if the contrast ratio between foreground text and background is sufficient. W3C has described the minimum contrast ratio for text that is less than 18 point (if not bold) and less than 14 point (if bold) to be 4.5:1 at Level AA and 7:1 at Level AAA.\n\nOn all pages, ensure that each text/background color combination presents a contrast ratio of at least 4.5:1 for small text and 3:1 for text that is at least 18 points or bold 14 points.\nA color contrast analyser can be downloaded from www.paciellogroup.com/resources/contrast-analyser.html",
+      "TECHNICAL_RECCOMENDATION": "Code not required",
+      "SUCCESS_CRITERIA": "1.4.3",
+      "CONFORMANCE_LEVEL": "AA"
+    },
+    {
+      "ISSUE_TITLE": "Color alone used to distinguish links",
+      "ISSUE_DESCRIPTION": "Color alone #03568C is used to distinguish \"XXXX\" link from the surrounding #333333 text. The link has low contrast ratio of 2.7:1 with the surrounding text making it difficult for users with color blindness to distinguish the link within the running text.",
+      "RECOMMENDATION": "Users with color deficiencies may not be able to quickly identify links on the website. This is especially true for links displayed within paragraphs when color alone is used to differentiate links from the surrounding text. Therefore it is essential to underline links persistently or make sure that the underline appears when the links receive keyboard focus.\n\nTo make it easy for all users to recognize links the best practice is to persistently underline them. If the above solution is not feasible, change the color of links so that they have a contrast ratio of at least 3:1 with the surrounding text.\nMoreover,  it would be best practice to provide additional visual cue such as underline when the mouse is hovered over the links  and when the links receive the keyboard focus.",
+      "TECHNICAL_RECCOMENDATION": "Code not required",
+      "SUCCESS_CRITERIA": "1.4.1",
+      "CONFORMANCE_LEVEL": "A"
+    },
+    {
+      "ISSUE_TITLE": "Insufficient color contrast for informative images",
+      "ISSUE_DESCRIPTION": "Some background/foreground color combinations with an insufficient contrast ratio are found:\n• The #FFFFFF \"LinkedIn\" image link has a contrast ratio of 2.8:1 on hover with #4DA3CB background.\n• The #FFFFFF \"Twitter\" image link has a contrast ratio of 1.9:1 on hover with #88C5F3 background.",
+      "RECOMMENDATION": "All the non text content of a web page including informative images, user interface controls and their different states such as hover, focus,active,etc. should be displayed using sufficient contrast between foreground/background and adjacent colors to make sure that people with low vision and those with color deficiencies can access them.\nWCAG 2.1 has outlined the contrast requirement for non text content as 3:1.\n\nFor all informative images, ensure that the contrast between foreground, background or adjacent colors is 3:1 to make the image's information accessible for users with low vision and color-blindness.\nA color contrast analyser can be downloaded from www.paciellogroup.com/resources/contrast-analyser.html",
+      "TECHNICAL_RECCOMENDATION": "Code not required",
+      "SUCCESS_CRITERIA": "1.4.11",
+      "CONFORMANCE_LEVEL": "AA"
+    },
+    {
+      "ISSUE_TITLE": "Insufficient contrast for interactive components (Checkboxes)",
+      "ISSUE_DESCRIPTION": "Some background/foreground color combinations with an insufficient contrast ratio are found:\n• The #FFFFFF inner background of the \"Select All Contacts\" checkbox has a contrast ratio of 1.3:1 with #DFDFDF background.\n• The #FFFFFF inner background of the checkboxes such as \"empy\", \"garry parker\", etc. has a contrast ratio of 1.1:1 on hover with #F1F1F1 background.",
+      "RECOMMENDATION": "Two colors used to display user interface controls are considered to have good visibility if the contrast ratio for the control’s color  in different states, i.e. active, hover and focus with the adjacent content is sufficient. All non-text elements, such as key images, user interface elements in different states (hover, active and focus) need to have a contrast ratio of  3:1.  This will Ensure that users with color deficiencies and low vision can access the non-text content with ease.\n\nEnsure that the color contrast for all user interface controls in their active and focus states is 3:1 with the adjacent content.\nA color contrast analyser can be downloaded from www.paciellogroup.com/resources/contrast-analyser.html",
+      "TECHNICAL_RECCOMENDATION": "Code not required",
+      "SUCCESS_CRITERIA": "1.4.11",
+      "CONFORMANCE_LEVEL": "AA"
+    },
+    {
+      "ISSUE_TITLE": "Insufficient color contrast for states of user interface controls",
+      "ISSUE_DESCRIPTION": "The #80BDFF focus indicator of \"Show entries\" drop-down list, \"Search\" input field, \"Previous\" link, etc. has an insufficient contrast ratio of 2.0:1 with #FFFFFF background.",
+      "RECOMMENDATION": "User interface controls should have sufficient contrast with the adjacent colors on different states, i.e. hover, focus and active. This helps low vision users to identify the state of different user interface controls easily. All non-text elements, such as key images, user interface controls in different states (hover, active and focus) should have a contrast ratio of  3:1. This will ensure that users with color deficiencies and low vision can access the controls with ease.\n\nFor all states of user interface controls, ensure that the color contrast for controls with their adjacent colors is 3:1\nA color contrast analyser can be downloaded from www.paciellogroup.com/resources/contrast-analyser.html",
+      "TECHNICAL_RECCOMENDATION": "Code not required",
+      "SUCCESS_CRITERIA": "1.4.11",
+      "CONFORMANCE_LEVEL": "AA"
+    },
+    {
+      "ISSUE_TITLE": "Color alone used to convey information",
+      "ISSUE_DESCRIPTION": "The #F77130 color is used to identify \"1\" selected link. This information is displayed using color only.\nUsers with color deficiencies will not be able to differentiate between the colors and will have no way to easily identify which page is currently selected.\nThis information is not available to screen reader users either.",
+      "RECOMMENDATION": "Users with visual impairments, such as color-blind users and blind users will find it difficult to understand information that is conveyed using color alone. When color is used to convey important information, it is essential that information is also available in at least one additional form, such as patterns, symbols, text etc. \nInformation conveyed with the help of color is easy to understand for people with learning disabilities. However, if color alone is used people with visual impairments will find it difficult to understand the information. Thus, it is essential to supplement color with symbols, text, patterns etc.\n\nApply the following changes:\n• Add aria-current=\"page\" in the source code of the selected link.\n• Along with color, use additional visual clues (e.g. bold text, thick border, etc.) to show the selected page.",
+      "TECHNICAL_RECCOMENDATION": "Code not required",
+      "SUCCESS_CRITERIA": "1.4.1",
+      "CONFORMANCE_LEVEL": "A"
+    },
+    {
+      "ISSUE_TITLE": "Unidentifiable link in a body of text",
+      "ISSUE_DESCRIPTION": "Links in the body of the text is not easily identifiable visually by a means other than color (underlined bold etc)",
+      "RECOMMENDATION": "Apply a visually identifiable medium (underlined bold etc) Make sure there is a 3: 1 contrast between text background and links and that there is another way than color to identify them when hovering and focusing",
+      "TECHNICAL_RECCOMENDATION": "Information missing",
+      "SUCCESS_CRITERIA": "1.4.1",
+      "CONFORMANCE_LEVEL": ""
+    },
+    {
+      "ISSUE_TITLE": "Instructions rely on visual sensory characteristics ",
+      "ISSUE_DESCRIPTION": "Sensory information (eg: position, size, shape and sound) is provided as the only way to provide information on page",
+      "RECOMMENDATION": "Understanding and following instructions must not rely exclusively on shape, size, location, orientation, or sound. There are instructions that rely on visual cues. This may particularly disadvantage users who do not primarily access the content through the visuals, such as screen reader users.",
+      "TECHNICAL_RECCOMENDATION": "Code not required",
+      "SUCCESS_CRITERIA": "1.3.3",
+      "CONFORMANCE_LEVEL": "A"
+    },
+    {
+      "ISSUE_TITLE": "Identical label for button",
+      "ISSUE_DESCRIPTION": "Identical label \"Follow\" is provided for the social media buttons present in main content area. This made it difficult for screen reader users to understand the purpose of the buttons. \n",
+      "RECOMMENDATION": "Assistive technologies, such as screen readers identify each form control on the basis of their label. This is found very useful by users as it not only helps them to understand the purpose of the button but also differentiate one button from another. \nButton label enables users to understand the purpose of the button. Identical and non-descriptive button labels make it difficult for the screen reader users to understand the functionality associated with each button.\n\nProvide unique and descriptive labels for the buttons using aria-label attribute. ",
+      "TECHNICAL_RECCOMENDATION": "<button aria-label=\"Follow us on Facebook\"></button>\nOr\n<h2 id=\"txt\"> follow us<h2>\n<button aria-labelledby=txt\"> Facebook </button>",
+      "SUCCESS_CRITERIA": "2.4.6",
+      "CONFORMANCE_LEVEL": "AA"
+    },
+    {
+      "ISSUE_TITLE": "Non-descriptive link text",
+      "ISSUE_DESCRIPTION": "The link text \"here\" in the header section does not describe the destination it points to. As a result, screen reader users failed to understand the purpose of the link.",
+      "RECOMMENDATION": "Link text on a web page should be unique and descriptive. A screen reader presents all the links on a web page in the form of a list. As a result, users will access only the link text and not the surrounding information. Thus, it is essential to provide meaningful and unique link text to enable screen reader users to understand the link information when read out of context.\n\nProvide text as “click here learn more about me\" for the link via \"aria-label\" attribute. ",
+      "TECHNICAL_RECCOMENDATION": "<a href=\"…\" aria-label=\"Click here to learn more about me\">…<a/>",
+      "SUCCESS_CRITERIA": "2.4.4",
+      "CONFORMANCE_LEVEL": "A"
+    },
+    {
+      "ISSUE_TITLE": "Accessible name does not match with visual label",
+      "ISSUE_DESCRIPTION": "Accessible name \"dismiss cookie message\" does not match with the visual label \"Accept Cookies\" of the button. This will result in speech recognition users and text-to-speech users finding it confusing while interacting with the button.",
+      "RECOMMENDATION": "Textual labels of user interface elements should have accessible names that match with their visual labels. Accessible names that are defined programmatically in the mark-up are rendered by assistive technologies, such as screen readers, speech recognition systems, text-to-speech systems for their users. Speech recognition users will look at the visual label and give command to their assistive technology. If accessible name and visual label of an user interface element do not match, users will find it difficult to give  commands to their assistive technologies. Similarly, text-to-speech users will have an indifferent reading experience when visual label and accessible names do not match.\n\n\nIt is recommended to specify accessible names for user interface elements that matches their visual label. Specify accessible name for the button as \"Accept\" via aria-label attribute.",
+      "TECHNICAL_RECCOMENDATION": "<button aria-label=\"Accept\">…</button>",
+      "SUCCESS_CRITERIA": "2.5.3",
+      "CONFORMANCE_LEVEL": "A"
+    },
+    {
+      "ISSUE_TITLE": "The wording of the link text is not understandable",
+      "ISSUE_DESCRIPTION": " The link text is based on the name of the file",
+      "RECOMMENDATION": "The link text should be based on the document title",
+      "TECHNICAL_RECCOMENDATION": "Information missing",
+      "SUCCESS_CRITERIA": "2.4.4",
+      "CONFORMANCE_LEVEL": ""
+    },
+    {
+      "ISSUE_TITLE": "Links to PDF not indicative enough",
+      "ISSUE_DESCRIPTION": "Some instances of links were found that open a PDF file upon clicking. For example, links such as \"XXXX\" and \"XXXX\" load a PDF document when activated. However, the users were not informed about the PDF in advance. In addition, information about the size of the PDF file was not made available for users.",
+      "RECOMMENDATION": "Links that unexpectedly open PDF documents may be a source of confusion for some users, such as users of screen readers. Moreover, specifying the file size helps users (especially users browsing with a low bandwidth connection) to decide if they wish to access the file. Thus, it is advisable to identify the file type and size for alternate format documents made available on the website to help screen reader users, users with cognitive impairments and low bandwidth users to access the information with ease.\n\nInform users about links displaying information in alternate file format, such as PDF along with the file size. This will help users decide if they wish to access the information made available in alternate formats, such as PDF etc.",
+      "TECHNICAL_RECCOMENDATION": "Not required",
+      "SUCCESS_CRITERIA": "2.4.4",
+      "CONFORMANCE_LEVEL": "A"
+    },
+    {
+      "ISSUE_TITLE": "New window links were not identified",
+      "ISSUE_DESCRIPTION": "Users are not informed about \"XXXX\", \"XXXX\", etc. links displaying information in a new window.",
+      "RECOMMENDATION": "New window links when used without informing users in advance lead to confusion in the minds of users with learning and visual disabilities as all of a sudden \"Back\" button of the browser becomes disabled.\n\n\nInform users in advance about links opening in a new window. This can be done by providing an image icon depicting new window besides the link text. The image icon must be inside the <a> element and specify alt as \"Opens in a new window\".",
+      "TECHNICAL_RECCOMENDATION": "Code not required",
+      "SUCCESS_CRITERIA": "3.2.5",
+      "CONFORMANCE_LEVEL": "(AAA) It is best practice"
+    },
+    {
+      "ISSUE_TITLE": "Missing landmark on the page",
+      "ISSUE_DESCRIPTION": "The <main> land mark is not define on the page. As a result,  blind users might not understand page content stucture.",
+      "RECOMMENDATION": "Landmark roles are defined to help users navigate to different sections of a web page quickly. Different user agents provide users with means to navigate to web page landmarks. Landmark roles are defined based on their location on a web page. For example, a web page can have only 1 banner or main landmark.\nWhen landmark roles are not defined correctly, it becomes very frustrating for assistive technology users, such as screen reader users to navigate to different sections of the page quickly. This also leads to a poor user experience for screen reader users and acts as frustration rather than assistance in navigation for them.\n\nUse <main> landmark to define the main content of the page.",
+      "TECHNICAL_RECCOMENDATION": "<---Main content--->\n<main>….</main>",
+      "SUCCESS_CRITERIA": "1.3.1",
+      "CONFORMANCE_LEVEL": "A"
+    },
+    {
+      "ISSUE_TITLE": "Missing Skip to content link",
+      "ISSUE_DESCRIPTION": "“Skip to content” link is not available on the tested pages of the website.",
+      "RECOMMENDATION": "Skip links are added on a page to help users navigate to main content of the page quickly by jumping over the repetitive navigation links displayed at the top of each web page of a website. \nKeyboard-only users and screen reader users benefit by using skip links as they can quickly access the core content of a web page. Visible skip links should be provided at the top of each web page of a website to help users quickly access the core content of the page. If this clutters the web page design then provide hidden skip links and make them visible when they receive keyboard focus.\n\nEven though headings are defined on the page and this is sufficient to meet this SUCCESS_CRITERIA, however, in order to assist sighted keyboard-only users, it is recommended that a “Skip to content” link be provided. This link can be always visible, or it can be positioned off-screen and be displayed when it receives keyboard focus. ",
+      "TECHNICAL_RECCOMENDATION": "Link:\n<a href=\"#content\">Skip to content</a>\nAnchor:\n<a name=\"content\" id=\"content\"></a>",
+      "SUCCESS_CRITERIA": "2.4.1",
+      "CONFORMANCE_LEVEL": "AA"
+    },
+    {
+      "ISSUE_TITLE": "Form automatically submitted when taking focus of an element",
+      "ISSUE_DESCRIPTION": "A form is automatically submitted as soon as a form element takes focus (onFocus)",
+      "RECOMMENDATION": "A form should be submitted only after activating the submit button (onClick)",
+      "TECHNICAL_RECCOMENDATION": "Information missing",
+      "SUCCESS_CRITERIA": "3.2.1",
+      "CONFORMANCE_LEVEL": ""
+    },
+    {
+      "ISSUE_TITLE": "Form automatically submitted during data entry",
+      "ISSUE_DESCRIPTION": "A form is automatically submitted after entering data in a field (onInput)",
+      "RECOMMENDATION": "A form should be submitted only after activating the submit button (onClick)",
+      "TECHNICAL_RECCOMENDATION": "Information missing",
+      "SUCCESS_CRITERIA": "3.2.2",
+      "CONFORMANCE_LEVEL": ""
+    },
+    {
+      "ISSUE_TITLE": "Change of the content of the current page as soon as the focus is taken",
+      "ISSUE_DESCRIPTION": "A change of content takes place without being initiated voluntarily by the user (onFocus)",
+      "RECOMMENDATION": "A change of content must take place only after voluntary triggering of the user (onClick) on a link or an action button",
+      "TECHNICAL_RECCOMENDATION": "Information missing",
+      "SUCCESS_CRITERIA": "3.2.1",
+      "CONFORMANCE_LEVEL": ""
+    },
+    {
+      "ISSUE_TITLE": "Opening of a new page as soon as focus is taken",
+      "ISSUE_DESCRIPTION": ": A page change takes place without being initiated voluntarily by the user (onFocus)",
+      "RECOMMENDATION": ": A change of content must take place only after voluntary triggering of the user (onClick) on a link",
+      "TECHNICAL_RECCOMENDATION": "Information missing",
+      "SUCCESS_CRITERIA": "3.2.1",
+      "CONFORMANCE_LEVEL": ""
+    },
+    {
+      "ISSUE_TITLE": "Content not accessible for low vision users",
+      "ISSUE_DESCRIPTION": "Content that becomes available when users hover over with a mouse  on \"XXXX\" button is not accessible for low vision users. When low vision users try to move their mouse on the content in order to read it, the content disappears. Thus low vision users found it difficult to access the content. ",
+      "RECOMMENDATION": "The user must be able to move the mouse pointer from the trigger element to the content of the tooltip without closing it\n\nModify the scripts associated with the tooltip content to ensure that it remains visible until user decides to dismiss the tooltip. This will enable low vision users to navigate to the tooltip content and dismiss it after accessing it. ",
+      "TECHNICAL_RECCOMENDATION": "Code not required",
+      "SUCCESS_CRITERIA": "1.4.13",
+      "CONFORMANCE_LEVEL": "AA"
+    },
+    {
+      "ISSUE_TITLE": "Cannot close additional content (tooltip popin etc ) without moving the focus or the pointer",
+      "ISSUE_DESCRIPTION": "After opening additional content the user cannot close it without having to move the focus or the mouse pointer",
+      "RECOMMENDATION": "The user must be able to close the additional content without having to move the focus or the mouse pointer",
+      "TECHNICAL_RECCOMENDATION": "Information missing",
+      "SUCCESS_CRITERIA": "1.4.13",
+      "CONFORMANCE_LEVEL": ""
+    },
+    {
+      "ISSUE_TITLE": "User’s session expires automatically",
+      "ISSUE_DESCRIPTION": "On the XXXXpage, the session expires automatically and the user is taken to the Log in page after a period of time.",
+      "RECOMMENDATION": "People with disabilities and users of assistive technology take longer to complete on-line tasks, in particular the completion of forms.\nFailure to inform users in advance and not allowing users to increase the time may result in the user having insufficient time to complete the task, rendering the service inaccessible.   \n\nWe recommend that one of the following techniques be adopted:\n1. Turn off time limit – provide a mechanism, e.g. a button, to allow the user to turn off the time limit before encountering it (place the mechanism at the top of the page).\n2. Adjust time limit – provide the ability to adjust the set time limit. Allow the user to set the time limit to at least ten times the length of the default setting. \n3. Extend time limit – allow the user to extend their session before the time expires. Warn the user before the time expires and allow the user to simply extend the time (for example, by activating a link or button). Allow the user to extend the time limit at least ten times.",
+      "TECHNICAL_RECCOMENDATION": "Code not required",
+      "SUCCESS_CRITERIA": "2.2.1",
+      "CONFORMANCE_LEVEL": "A"
+    },
+    {
+      "ISSUE_TITLE": "Missing instruction for character key shortcut",
+      "ISSUE_DESCRIPTION": "The shortcuts for buttonis implemented using only single character key. However, There is no way to turn off or remap these shortcuts.\n\nAs a result, users who might unintentionally activate keyboard shortcuts and speech input users might face difficulty while accessing the webpage.\n\nAdditionally, these single character key shortcuts are conflicting with screen reader shortcuts - quick navigation keys. This resulted in difficulty for screen reader users to access the BBBBB functionality.",
+      "RECOMMENDATION": "• Even though Windows based screen reader users can interact with the functionality using the pass through keystroke and Toggle between Virtual PC Cursor but the experience will not be intuitive. \n• For the benefit of speech input users, it is recommended provide an option to disable the character key shortcuts. This option should be available at the top of the page. This will enable voice input users to give voice commands and interact with the web page easily. \n• For the benefit of keyboard-only users these shortcuts are beneficial and they should remain. \n• Help section must be added that will include the  details on how Windows based screen reader users can access the shortcuts. For example, NVDA users can press \"NVDA Modifier Key + Space\" to turn on Focus Mode. In Focus Mode, users can press the shortcuts and access the functionality. \n\nSimilarly, JAWS users can press \"JAWS Modifier Key + Z\" to turn off Virtual PC cursor. Once the Virtual PC cursor is turned off then users can press the shortcuts to access the functionality.",
+      "TECHNICAL_RECCOMENDATION": "Code not required",
+      "SUCCESS_CRITERIA": "2.1.4",
+      "CONFORMANCE_LEVEL": "AA"
+    },
+    {
+      "ISSUE_TITLE": "Only one navigation mechanism is present",
+      "ISSUE_DESCRIPTION": "Multiple navigation methods not provided to access different parts of the website",
+      "RECOMMENDATION": "At least 2 navigation mechanisms must be present on the interface: Complete the existing mechanism with a solution listed below: \\n - a main navigation menu \\n - a table of contents \\n - a sitemap \\n - a search mechanism \\n - a list of links to navigate to across the whole site (footer)",
+      "TECHNICAL_RECCOMENDATION": "Information missing",
+      "SUCCESS_CRITERIA": "2.4.5",
+      "CONFORMANCE_LEVEL": ""
+    },
+    {
+      "ISSUE_TITLE": "A visual information on the user's current position within the hierarchy is missing",
+      "ISSUE_DESCRIPTION": "The current position within the hierarchy of a site cannot be determined visually",
+      "RECOMMENDATION": "add a breadcrumb \\n - main navigation: add a visual indication not depending only on the color (ex: underline the active item)",
+      "TECHNICAL_RECCOMENDATION": "Information missing",
+      "SUCCESS_CRITERIA": "2.4.5",
+      "CONFORMANCE_LEVEL": ""
+    },
+    {
+      "ISSUE_TITLE": "The current position within the hierarchy cannot be determined programmatically",
+      "ISSUE_DESCRIPTION": "The current position within the hierarchy cannot be determined programmatically (from an assistive technology such as a screen reader for example)",
+      "RECOMMENDATION": "breadcrumbs: apply an aria-current=\\location\\ attribute on the active element \\n- main navigation: add an aria-current=\\page\\ attribute on the active item",
+      "TECHNICAL_RECCOMENDATION": "breadcrumbs: <li aria-current=\\location\\> [] </li> \\n- main navigation: <a [] aria-current=\\page\\> [] </a> \\n- procedure multiple steps: <a [] aria-current=\\step\\> [] </a>",
+      "SUCCESS_CRITERIA": "2.4.5",
+      "CONFORMANCE_LEVEL": ""
+    },
+    {
+      "ISSUE_TITLE": "Status message not announced for screen reader users",
+      "ISSUE_DESCRIPTION": "The \"Loading\" message is not rendered by the screen reader. Thus,  screen reader users are not aware about this message being displayed on the page.",
+      "RECOMMENDATION": "Specify ARIA role \"status\" or ARIA live properties such as  aria-live=\"polite\" for the mentioned message. This will ensure that the screen reader will identify the message for their users as soon as it is displayed on the page. ",
+      "TECHNICAL_RECCOMENDATION": "examples: \\n- <div role =\\status\\> [] </div> \\n- <div aria-live=\\assertive\\> [] </div>",
+      "SUCCESS_CRITERIA": "4.1.3",
+      "CONFORMANCE_LEVEL": "A"
+    },
+    {
+      "ISSUE_TITLE": "No means to control moving content",
+      "ISSUE_DESCRIPTION": "Moving content was present in the main content area of the page, but no means was provided for users to Stop/Pause and Play the moving content.",
+      "RECOMMENDATION": "Ensure the movement stops automatically after five seconds.\nAlternatively, provide users with an option to control the moving content through start, stop and pause buttons or links.  ",
+      "TECHNICAL_RECCOMENDATION": "Code not required",
+      "SUCCESS_CRITERIA": "2.2.2",
+      "CONFORMANCE_LEVEL": "A"
+    },
+    {
+      "ISSUE_TITLE": "Functionality inaccessible for keyboard users",
+      "ISSUE_DESCRIPTION": "Keyboard support is missing for the content that becomes available when users hover the text in the main content area of the page. \nFor example, content such as \"XXXX\", \"XXXX\", etc. is displayed only when users hover the mouse on text such as \"XXXX\", \"XXXX\", etc. This made it difficult for keyboard-only and screen reader users to access the functionality associated with it.",
+      "RECOMMENDATION": "Apply the following changes:\n• Modify the scripts to ensure that the contnet is available on focus as well as on hover. onfocus and onblur keyboard handlers can be used to ensure that the link is available for keyboard only users. \n• Specify key listeners to make sure that the content becomes visible when users press the Tab and Up/Down Arrow keys.\n• Add a hidden instruction for the benefit of screen reader users to inform them about the presence of the content. Add an instruction, such as \"Press the tab key to access the content”. This instruction should be placed before \"BBBBB\", \"BBBBB\", etc. text in the page source.",
+      "TECHNICAL_RECCOMENDATION": "Code not required",
+      "SUCCESS_CRITERIA": "2.1.1",
+      "CONFORMANCE_LEVEL": "A"
+    },
+    {
+      "ISSUE_TITLE": "Illogical tab order",
+      "ISSUE_DESCRIPTION": "Illogical tabbing order is found on the page, the interactive elements receive the keyboard focus in the following illogical order: \n1. \"XXXX\" button\n2. \"XXXX\" input field\nThis illogical tabbing order will create confusion for keyboard-only users.",
+      "RECOMMENDATION": "Avoid using tabindex values that are >1 to manage focus order as they may supersede logical tab order\nAlign the focus order with the reading order as much as possible in order to maintain a logical and intuitive navigation of the content. Too much deviation would put a lot of users with disabilities into confusion\n\nPlace the content of the webpage in a correct sequence in the source code as it appears visually.Move the content in the page source in the mentioned order to ensure that the content is available in correct order. CSS can be used to maintain the presentation of the page.\n\n1. \"XXXX\" input field\n2. \"XXXX\" button",
+      "TECHNICAL_RECCOMENDATION": "Code not required",
+      "SUCCESS_CRITERIA": "2.4.3",
+      "CONFORMANCE_LEVEL": "A"
+    },
+    {
+      "ISSUE_TITLE": "Focus visualization (outline) is disabled",
+      "ISSUE_DESCRIPTION": "The outline on page is deactivated",
+      "RECOMMENDATION": "Check that the outline is not deleted from a css property (ex: \\outline: none;\\)",
+      "TECHNICAL_RECCOMENDATION": "Information missing",
+      "SUCCESS_CRITERIA": "2.4.7",
+      "CONFORMANCE_LEVEL": ""
+    },
+    {
+      "ISSUE_TITLE": "The visualization of the focus (outline) does not have sufficient contrast",
+      "ISSUE_DESCRIPTION": "The visualization of the focus (outline) does not have sufficient contrast of 3:1",
+      "RECOMMENDATION": "The outline must have sufficient contrast with the background color whatever the context. preserve the default outline \\n- if the outline color is customized ensure that the color respects a ratio of 3:1 with the background color whatever the context",
+      "TECHNICAL_RECCOMENDATION": "Information missing",
+      "SUCCESS_CRITERIA": "1.4.11",
+      "CONFORMANCE_LEVEL": ""
+    },
+    {
+      "ISSUE_TITLE": "Content not available with browser zoom and fails to reflow",
+      "ISSUE_DESCRIPTION": "When low vision users view the page after zooming in, some content is not available. As a result, low vision users cannot access the mentioned content. For e.g. after zooming in to 200%, links \"XXXX\", \"XXXX\", etc. in the header section are not available.",
+      "RECOMMENDATION": "Flexible layouts should be used to display the page content. Dimensions for container elements used to display the page content should be defined using relative units, such as \"%\", \"em\", \"rem\" etc. to ensure that the content fits on the page when zoomed in. \n\nEnsure that all the page content is visible when zoomed in. Use relative units to define font and container sizes in CSS to ensure that page's content reflows correctly when zoomed in. In addition, use CSS media queries to display web page content correctly when zoomed in or viewed using different devices, such as mobile phones, tablets etc.",
+      "TECHNICAL_RECCOMENDATION": "Code not required",
+      "SUCCESS_CRITERIA": "1.4.4",
+      "CONFORMANCE_LEVEL": "AA"
+    },
+    {
+      "ISSUE_TITLE": "Presence of a horizontal scroll bar",
+      "ISSUE_DESCRIPTION": "A horizontal scroll bar appears after resizing the interface to 320px css wide",
+      "RECOMMENDATION": "apply relative units (em rem%) to text containers \\n- or use \\min-width\\ and \\min-height\\ properties instead of \\width\\ and \\height\\ properties",
+      "TECHNICAL_RECCOMENDATION": "Information missing",
+      "SUCCESS_CRITERIA": "1.4.10",
+      "CONFORMANCE_LEVEL": ""
+    },
+    {
+      "ISSUE_TITLE": "Text spacing does not works",
+      "ISSUE_DESCRIPTION": "When user tries to access the page with text spacing styles turned on, the styles does not gets applied to the content. This will result in users with low vision and users with learning impairments finding it difficult to read the text.",
+      "RECOMMENDATION": "Do not impose or inherit an absolute size (px ) to the spacing properties\nDefine the text and container sizes using percent (%), em and rem units. In addition use relative units  for defining CSS line-height, letter-spacing etc. properties and ensure that user's text spacing styles are not overridden.",
+      "TECHNICAL_RECCOMENDATION": "Code not required",
+      "SUCCESS_CRITERIA": "1.4.12",
+      "CONFORMANCE_LEVEL": "AA"
+    },
+    {
+      "ISSUE_TITLE": "Components repeated on several pages in different orders",
+      "ISSUE_DESCRIPTION": "Components repeated on several pages do not appear in the same order on some pages",
+      "RECOMMENDATION": "The layout of the components must be homogeneous between all the pages of a site Components should appear consistently in the same relative order",
+      "TECHNICAL_RECCOMENDATION": "Information missing",
+      "SUCCESS_CRITERIA": "3.2.3",
+      "CONFORMANCE_LEVEL": ""
+    },
+    {
+      "ISSUE_TITLE": "The clickable surface of some interactive elements is not sufficient",
+      "ISSUE_DESCRIPTION": "The clickable area of interactive elements is not at least 44 by 44 CSS pixels",
+      "RECOMMENDATION": "enlarge the clickable surface to reach at least 44 by 44 CSS pixels \\n - propose a mechanism in the page allowing to enlarge the size without resorting to the zoom",
+      "TECHNICAL_RECCOMENDATION": "Information missing",
+      "SUCCESS_CRITERIA": "2.5.5",
+      "CONFORMANCE_LEVEL": ""
+    },
+    {
+      "ISSUE_TITLE": "Missing form label or 'title' attribute",
+      "ISSUE_DESCRIPTION": "The \"First Name\", \"Last Name\", \"Email\", etc. input fields do not have label associated with it and the title attribute is not included in its source code either. As a result, users with visual impairments who use a screen reader will not be able to understand the purpose of the form fields.\n",
+      "RECOMMENDATION": "Each form control should have a unique label. In the absence of label, it becomes difficult for users especially screen reader users to understand the purpose of the form control and input information.\nIn case of forms, where it is not possible to specify a label, include a ‘title’ attribute describing the purpose of the input field.\nTitle attribute is specified for form input fields where it is not possible to assign labels due to web page layout and design. WCAG 2.1 allows authors to specify descriptive ‘title’ attributes for form controls for which labels cannot be assigned. This will help to make the purpose of form controls meaningful for screen reader users.\n\nProvide unique and descriptive label for each form control using <label> element. This will help screen reader users to understand the purpose of the form control and input the details accordingly. Web pages that lack label for form controls make it difficult for screen reader users to complete the form successfully.\nIn addition, associate the label explicitly with the form control using the “for” and “id” attribute to ensure that assistive technologies identify the label for each form control correctly. Alternatively use either hidden labels or ‘title’ or ‘aria-label’ attribute to convey the purpose of the form controls to screen reader users as well as maintain the presentation.",
+      "TECHNICAL_RECCOMENDATION": "<label for=\"FN\">First Name</label>\n<input type=textid=\"FN\"….>",
+      "SUCCESS_CRITERIA": "1.3.1",
+      "CONFORMANCE_LEVEL": "A"
+    },
+    {
+      "ISSUE_TITLE": "Inappropriate label for input field",
+      "ISSUE_DESCRIPTION": "Inappropriate label “Search bar to search through the Support Team members.\" is provided for the \"Search\" input field.\nAs a result, screen reader users will not understand the purpose of the input field effectively.",
+      "RECOMMENDATION": "Form control label enables users to understand the purpose of the form control. Inappropriate form control labels make it difficult for the screen reader users to understand the purpose of the form controls effectively.\n\nProvide unique  and descriptive label \"Search\" for the mentioned input field using \"aria-label\" attribute.\n\n",
+      "TECHNICAL_RECCOMENDATION": "<input type=\"search\" id=\"searchinput\" placeholder=\"Search Support Team...\" aria-label=\"Search Supoort Team\">",
+      "SUCCESS_CRITERIA": "2.4.6",
+      "CONFORMANCE_LEVEL": "A"
+    },
+    {
+      "ISSUE_TITLE": "Missing instruction for date format",
+      "ISSUE_DESCRIPTION": "The instruction about the format for inputting the \"Open Date:\", \"Close Date:\", etc.  in main content area  is not provided in the <label> element in the HTML mark-up.\nAs a result, screen reader users and users with learning impairments will find it difficult to identify the format in which they need to input the date.",
+      "RECOMMENDATION": "When the instruction about the input format is not provided for the input field, screen reader users and users with learning impairments will find it difficult to identify the format in which they need to input the value.\nThe instruction about the input format should be provided within <label> element of the input field in order to ensure that screen reader users can access the instruction effectively.\nTo help screen reader users submit the form successfully, it is recommended to include the instruction about date format within the <label> element of the input field.",
+      "TECHNICAL_RECCOMENDATION": "<label>Open date (dd/mm/yyyy)</label>\n<input type=\"date\"…...>",
+      "SUCCESS_CRITERIA": "3.3.2",
+      "CONFORMANCE_LEVEL": "A"
+    },
+    {
+      "ISSUE_TITLE": "Missing instruction for mandatory fields",
+      "ISSUE_DESCRIPTION": "Although an asterisk (*) is provided for the mandatory fields in the form, the instruction stating the meaning of the asterisk (*) is not provided.",
+      "RECOMMENDATION": "Screen reader users often prefer identifying mandatory form field information in advance to complete the form successfully and avoid error messages. Well-defined mandatory form fields are also helpful for users with mobility impairments as they can fill up the form with ease. In the absence of mandatory form field information, users might incorrectly fill up the form and thus might lead to frustration. \nThe best way to mark mandatory form fields is by including the information within the form labels as all users read the label before filling up form details.    \nProvide the instruction explaining the meaning of the asterisk (*) such as “* denotes mandatory fields”. Place the instruction at the top of the form to ensure all users can access the instructions.",
+      "TECHNICAL_RECCOMENDATION": "Code not required",
+      "SUCCESS_CRITERIA": "3.3.2",
+      "CONFORMANCE_LEVEL": "A"
+    },
+    {
+      "ISSUE_TITLE": "Mandatory fields are not identified",
+      "ISSUE_DESCRIPTION": "There is no indication that the form fields such as \"To:\" and \"Subject:\" are mandatory. Users are informed of the field being mandatory in the form of an error after the form is submitted with error.",
+      "RECOMMENDATION": "Screen reader users often prefer identifying mandatory form field information in advance to complete the form successfully and avoid error messages. Well-defined mandatory form fields are also helpful for users with mobility impairments as they can fill up the form with ease. In the absence of mandatory form field information, users might incorrectly fill up the form and thus might lead to frustration. \nThe best way to mark mandatory form fields is by including the information within the form labels as all users read the label before filling up the form details.  \n\n\nProvide the asterisk (*) within the label mark-up of the respective form field.\nAdditionally, provide an instruction \"* denotes mandatory fields\". Place the instruction at the beginning of the form to ensure all users can access the instruction.",
+      "TECHNICAL_RECCOMENDATION": "Code not required",
+      "SUCCESS_CRITERIA": "3.3.2",
+      "CONFORMANCE_LEVEL": "A"
+    },
+    {
+      "ISSUE_TITLE": "Missing grouping of form controls",
+      "ISSUE_DESCRIPTION": "The checkboxes such as “Company Trainer”, ”Hiring Manager”, “Mentor”, etc. are not programmatically grouped and associated with an instruction.\nAs a result, screen reader users cannot understand the purpose of these checkboxes.",
+      "RECOMMENDATION": "Form controls such as check boxes and radio buttons should be grouped together and associated with their respective instruction in the source code. This will enable screen reader users to interact with such form controls effectively. While grouping related form controls, ensure that the instruction text is included via the <legend> element to make the information available for the users accurately.\n\n\nInclude the instruction text “Select Roles:” within the <legend> element. Use the <fieldset> and <legend> elements to group the instruction text and checkboxes.\n",
+      "TECHNICAL_RECCOMENDATION": "Code not required",
+      "SUCCESS_CRITERIA": "1.3.1",
+      "CONFORMANCE_LEVEL": "A"
+    },
+    {
+      "ISSUE_TITLE": "Generic error messages",
+      "ISSUE_DESCRIPTION": "On Contact Us form, when user clicks on \"SubmitForm\" button , generic and non-descriptive error message \"Required\" is displayed in the form when the mandatory fields are left empty.",
+      "RECOMMENDATION": "When generic and non-descriptive error messages are provided users find it difficult to identify the fields in error and amend the entered data. Add descriptive error messages for all form fields with errors unless it would affect the security of the form data.\n\n\nEnsure that descriptive and specific error messages are provided for fields with error, for e.g. “First name field is required\".",
+      "TECHNICAL_RECCOMENDATION": "Code not required",
+      "SUCCESS_CRITERIA": "3.3.1",
+      "CONFORMANCE_LEVEL": "A"
+    },
+    {
+      "ISSUE_TITLE": "Error messages difficult to locate",
+      "ISSUE_DESCRIPTION": "When users submit the XXXXform with errors, error messages gets displayed at the beginning of the form and the keyboard focus remains on “Send” button itself. As a result, screen reader users were unaware about the occurrence of errors on the page.",
+      "RECOMMENDATION": "Error messages or validation messages of forms are pointers that enable users identify the mistakes and rectify them. As a result, error messages should be accurate and descriptive so that users are able to provide correct information and submit the form without any problem.\nError messages and form submission messages must be placed at the beginning of the form to ensure that all users can access them.\nScreen reader users are likely to miss the error messages when displayed between form fields. In fact, these users generally tab through form fields without reading any of the text surrounding them (with the exception of labels).\nWhen error messages get dynamically added on or around the form fields, screen readers should be informed about the error being added on the page to ensure that users are aware about the errors. \n\nApply the following changes:\n• Add the 'aria-describedby' attribute to the form field. The value should match “id” attribute of the error message.\n• Set focus on the first field with error using the JavaScript .focus() method as soon as the form is submitted. ",
+      "TECHNICAL_RECCOMENDATION": "Code not required",
+      "SUCCESS_CRITERIA": "3.3.1",
+      "CONFORMANCE_LEVEL": "A"
+    },
+    {
+      "ISSUE_TITLE": "Important data is submitted without the possibility of being canceled or verified",
+      "ISSUE_DESCRIPTION": "Users are not provided with a control to canceled or verify when submitting important data (legal commitment financial transaction modification or deletion of important data response to a test or examination )",
+      "RECOMMENDATION": "Users must have control when submitting important data (legal commitment financial transaction modification or deletion of important data response to a test or examination ). Apply one of the solutions below: \\n- The action can be canceled \\n- a confirmation step allowing verification or modification is present before validation",
+      "TECHNICAL_RECCOMENDATION": "Example: \\nAfter submitting the form a confirmation message appears in a pop-up \\nThe message includes the data entered by the user and gives the possibility to validate or cancel \\nIf the user cancels he is redirected to the form its entries are always present in the controls with the possibility of modifying them",
+      "SUCCESS_CRITERIA": "3.3.4",
+      "CONFORMANCE_LEVEL": ""
+    },
+    {
+      "ISSUE_TITLE": "Purpose of input field not identified programmatically",
+      "ISSUE_DESCRIPTION": "The purpose of \"First Name\", \"Last Name\", etc. input fields is not identified programmatically.\nThis will result in users with learning and mobility disabilities taking longer to fill in the details as they had to type the details instead of the values getting filled automatically.",
+      "RECOMMENDATION": "Web forms that collect user information should have their purpose defined programmatically. This will help user agents, such as browsers, assistive technologies etc. to access this information and present it to users. By programmatically declaring the type of data required for an input field helps users with cognitive and mobility disabilities fill out forms easily. \nLabels and form instructions do provide guidance for filling up a form. However, labels and instruction are subject to change from one web form to another. By defining the input purpose programmatically via consistent autocomplete token values, users can fill up the form details easily without requiring to memorize the details or type them on each form.\n\nUse HTML 5.2 autocomplete attribute to add token values for \"First name\", \"Last name\", etc. input fields. This will improve the browser's auto fill feature as well as can be used by plug-ins to fill in the details for users with mobility and cognitive impairments. For more information on how to implement this can be found at:\nhttps://www.w3.org/WAI/WCAG21/Techniques/html/H98",
+      "TECHNICAL_RECCOMENDATION": "examples: autocomplete=\\username\\ autocomplete=\\new-password\\ autocomplete =\\postal-code\\ etc ",
+      "SUCCESS_CRITERIA": "1.3.5",
+      "CONFORMANCE_LEVEL": "AA"
+    },
+    {
+      "ISSUE_TITLE": "Zoom is not allowed",
+      "ISSUE_DESCRIPTION": "The enlargement of the text to 200% is not possible",
+      "RECOMMENDATION": "If a \\<meta name = 'viewport'>\\ tag is present: \\n- the user-scalable='no' parameter is not present \\n- and the maximum-scale parameter is not less than 2",
+      "TECHNICAL_RECCOMENDATION": "Information missing",
+      "SUCCESS_CRITERIA": "1.4.4",
+      "CONFORMANCE_LEVEL": ""
+    },
+    {
+      "ISSUE_TITLE": "Dropdowns get activate on down-event",
+      "ISSUE_DESCRIPTION": "As soon as users press the left mouse button down on \"XXXX\", \"XXXX\" and \"XXXX\" drop-down lists in the XXXXform, the options become visible. This will create problems for users who have unintentially touched the dropdown and have no means to cancel the activation.",
+      "RECOMMENDATION": "User interface elements should get activated on up-event and not on down-event.",
+      "TECHNICAL_RECCOMENDATION": "Code not required",
+      "SUCCESS_CRITERIA": "2.5.2",
+      "CONFORMANCE_LEVEL": "A"
+    },
+    {
+      "ISSUE_TITLE": "An action based on a complex gesture has no alternative",
+      "ISSUE_DESCRIPTION": "action based on complex gestures does not have an alternative based on a single pointer",
+      "RECOMMENDATION": "Any action based on complex gestures must have an alternative based on a single pointer. : Example: for a zoom action on a map with a finger pinch an alternative in the form of <button> [+] and [-] is proposed",
+      "TECHNICAL_RECCOMENDATION": "Information missing",
+      "SUCCESS_CRITERIA": "2.5.1",
+      "CONFORMANCE_LEVEL": ""
+    },
+    {
+      "ISSUE_TITLE": "Content not available on mobile device",
+      "ISSUE_DESCRIPTION": "The content such as  Expand / collapse icon and  \"Reply\" text get cut off in portrait mode. As a result mobile users will miss out important information on the screen.",
+      "RECOMMENDATION": "When the screen orientation is not restricted to portrait mode, users with dexterity impairments, who have mounted their device on a wheelchair will be able to use the content in their preferred  orientation. Moreover, low vision users will be able to view content in the landscape orientation.\nWhen screen orientation is fixed to either landscape or portrait mode, users with dexterity impairments, and low vision users may find it difficult to access the app effectively.\n\nUse CSS media queries to ensure that all the page content is available in both landscape and portrait orientation. Use media query \"@media screen and (orientation: portrait)\" to define how the mentioned table will be displayed in both the orientations.",
+      "TECHNICAL_RECCOMENDATION": "Code not required",
+      "SUCCESS_CRITERIA": "1.3.4",
+      "CONFORMANCE_LEVEL": "AA"
+    },
+    {
+      "ISSUE_TITLE": "Button state not defined",
+      "ISSUE_DESCRIPTION": "The state \"selected\" is not defined for the \"For Sale\" and \"For Rent\" buttons in the main content area.\nAs a  result, screen reader users will not understand the state of the button by default.",
+      "RECOMMENDATION": "All the interactive elements must be accessible for assistive technology users such as screen reader users. When native HTML elements are used basic information about an element, such as name, role, state and value is exposed to assistive technologies by default. However, for custom components this information needs to be made available for assistive technologies so users can interact with the custom components effectively.\nWhen state of an interactive element is not exposed to assistive technologies appropriately through code, users might not be able to interact with the element effectively.\n\n\nProvide the \"Selected\" state for the buttons using aria-selected attribute.",
+      "TECHNICAL_RECCOMENDATION": "<button aria-selected=\"true\">Chair</button>",
+      "SUCCESS_CRITERIA": "4.1.2",
+      "CONFORMANCE_LEVEL": "A"
+    },
+    {
+      "ISSUE_TITLE": "Custom drop-down inaccessible for keyboard-only and screen reader users",
+      "ISSUE_DESCRIPTION": "Custom drop-down lists such as \"All Department\", \"All City\" and \"All State\" are included on the page that enables screen users to select an option.\nHowever, the drop-down lists are inaccessible for screen reader users.",
+      "RECOMMENDATION": "All the interactive elements must be accessible for assistive technology users such as screen reader users. When native HTML elements are used basic information about an element, such as name, role, state and value is exposed to assistive technologies by default. However, for custom components this information needs to be made available for assistive technologies so users can interact with the custom component effectively.\n\n\nApply the following changes:\n• Replace the custom dropdown with the standard dropdown using <select> and <option> elements.\n• Associate the labels \"Loan Type\" and \"Credit Score\" explicitly with <select>element using the “for” and “id” attribute to ensure that assistive technologies identify the label for each form control correctly. \n\nAlternatively, apply the following changes:\n• Mark-up \"Loan Type\" and \"Credit Score\" interactive elements using <button> element.\n• Modify scripts to ensure that the drop-down list buttons are accessible with a keyboard as well as a mouse.\n• Set the “aria-expanded” attribute to “false” for the drop-down buttons by default as the drop-down buttons are in the collapsed state. Ensure that the value of the “aria-expanded” attribute changes on user interaction via scripting.\n• Associate the \"Loan Type\" and \"Credit Score\" text with <button> element using \"aria-labelledby\" attribute.",
+      "TECHNICAL_RECCOMENDATION": "Unable to give code",
+      "SUCCESS_CRITERIA": "4.1.2",
+      "CONFORMANCE_LEVEL": "A"
+    }
+   ]

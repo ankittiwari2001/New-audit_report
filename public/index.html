@@ -5,10 +5,31 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="script.js"></script>
 
     <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     
-    
+    <style>
+      #result {
+       position: absolute;
+       width: 100%;
+       max-width:870px;
+       cursor: pointer;
+       overflow-y: auto;
+       max-height: 400px;
+       box-sizing: border-box;
+       z-index: 1001;
+       
+       
+      }
+      .link-class:hover{
+       background-color:#f1f1f1;
+      }
+      
+      </style>
     
 </head>
 <body>
@@ -39,7 +60,16 @@
   <input type="text"  id="Page URL" name="Page URL" required=""><br>
 
   <label for="Issue Title">Issue Title</label><br>
-  <input type="text"  id="Issue Title" name="Issue Title" required=""><br>
+  <input type="text"  id="search" name="Issue Title" required=""  placeholder="Search Issue Details" class="form-control">
+  
+    <!-- <input type="text" name="search" id="search" placeholder="Search Issue Details" class="form-control" /> -->
+  
+   <ul class="list-group" id="result"></ul>
+   <br />
+  
+
+
+
 
   <label for="Issue Description">Issue Description</label><br>
   <input type="text"  id="Issue Description" name="Issue Description" placeholder="Ex: simple description" required=""><br>
@@ -72,11 +102,11 @@
   <input type="text" name="Tester Name" list="Tester Name">
     <datalist id="Tester Name">
       <option value="Rajesh">
-      <option value="Stuti">
-      <option value="Prince">
-      <option value="Kalyani">
+      </option><option value="Stuti">
+      </option><option value="Prince">
+      </option><option value="Kalyani">
         
-    </datalist><br>
+    </option></datalist>
 
   <label for="Created Date">Created Date</label><br>
   <input type="date"  id="Created Date" name="Created Date" required=""><br>
@@ -86,10 +116,47 @@
   <input type="submit" value="Submit">
 </form> 
 
+
+
+
 <script>
   function myFunction() {
     document.getElementById("AuditFrom").reset();
   }
+  
+  
+
   </script>
+  <script>
+    $(document).ready(function(){
+     $.ajaxSetup({ cache: false });
+     $('#search').keyup(function(){
+      $('#result').html('');
+      $('#state').val('');
+      var searchField = $('#search').val();
+      var expression = new RegExp(searchField, "i");
+      $.getJSON('/WCAG-issue-Library.json', function(data) {
+       $.each(data, function(key, value){
+        if (value.ISSUE_TITLE.search(expression) != -1)
+        {
+         $('#result').append('<li class="list-group-item link-class"> '+value.ISSUE_TITLE+'</li>');
+        }
+       });   
+      });
+     });
+     
+     $('#result').on('click', 'li', function() {
+      var click_text = $(this).text().split('|');
+      $('#search').val($.trim(click_text[0]));
+      $("#result").html('');
+     });
+    });
+    
+
+    
+    </script>
+  
+  
 </body>
 </html>
+  
